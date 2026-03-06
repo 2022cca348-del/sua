@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>빵 레시피 사이트</title>
+
+<style>
+body{
+  font-family:Arial;
+  background:#fff8f2;
+  text-align:center;
+}
+
+header{
+  background:#b5651d;
+  color:white;
+  padding:20px;
+}
+
+.container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+  padding:30px;
+}
+
+.card{
+  background:white;
+  width:230px;
+  border-radius:12px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.15);
+  padding:15px;
+}
+
+.card img{
+  width:100%;
+  border-radius:10px;
+}
+
+.recipe{
+  display:none;
+  margin-top:10px;
+  font-size:14px;
+  text-align:left;
+}
+
+button{
+  margin-top:10px;
+  padding:8px;
+  border:none;
+  background:#b5651d;
+  color:white;
+  border-radius:5px;
+  cursor:pointer;
+}
+</style>
+
+<script>
+function showRecipe(id){
+  var x = document.getElementById(id);
+
+  if(x.style.display === "none"){
+    x.style.display = "block";
+  }else{
+    x.style.display = "none";
+  }
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+<h1>🍞 빵 만들기 레시피</h1>
+</header>
+
+<div class="container">
+
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Chocolate_muffins.jpg">
+<h3>초코 머핀</h3>
+<button onclick="showRecipe('r1')">레시피 보기</button>
+<div id="r1" class="recipe">
+1. 밀가루, 코코아, 설탕 섞기<br>
+2. 우유와 달걀 넣기<br>
+3. 반죽 만들기<br>
+4. 180도 오븐 20분
+</div>
+</div>
+
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Blueberry_muffin.jpg">
+<h3>블루베리 머핀</h3>
+<button onclick="showRecipe('r2')">레시피 보기</button>
+<div id="r2" class="recipe">
+1. 재료 섞기<br>
+2. 블루베리 넣기<br>
+3. 틀에 담기<br>
+4. 180도 오븐 20분
+</div>
+</div>
+
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Anpan.jpg">
+<h3>단팥빵</h3>
+<button onclick="showRecipe('r3')">레시피 보기</button>
+<div id="r3" class="recipe">
+1. 밀가루 반죽 만들기<br>
+2. 팥 앙금 넣기<br>
+3. 둥글게 만들기<br>
+4. 오븐에 굽기
+</div>
+</div>
+
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Walnut_cake_Korea.jpg">
+<h3>호두과자</h3>
+<button onclick="showRecipe('r4')">레시피 보기</button>
+<div id="r4" class="recipe">
+1. 반죽 만들기<br>
+2. 팥과 호두 넣기<br>
+3. 틀에 넣기<br>
+4. 구워서 완성
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
